@@ -1,0 +1,20 @@
+--> Scenario:
+
+The scenario of the initial structure of our project consists of different materials, 3D assets and audio files.
+
+We first used a "Terrain Sample Asset Pack" from the asset store, 
+which is useful for stablishing the terrain material of the plane.
+
+Then, some 3D assets that we used to simulate the experience of being in a city park, 
+were obtained through this "Low Poly Environment Park" package from the asset store.
+
+We also added a .wav file from Freesound to put some environmental audio source, 
+which is simulating birds singing.
+
+--> Assets references:
+
+https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808
+
+https://assetstore.unity.com/packages/3d/environments/low-poly-environment-park-242702
+
+https://freesound.org/people/klankbeeld/sounds/624532/
