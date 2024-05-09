@@ -1,6 +1,8 @@
 --> Scenario:
 
 The scenario of the initial structure of our project consists of different materials, 3D assets and audio files.
+For all the boxes with hands and feet, we used some .png files that we had.
+Notice that this first version of the environment will not be as the final one, because we wanted to test the colors disposal.
 
 We first used a "Terrain Sample Asset Pack" from the asset store, 
 which is useful for stablishing the terrain material of the plane.
