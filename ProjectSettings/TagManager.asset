@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BlendPlane0
   - BlendPlane1
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX
