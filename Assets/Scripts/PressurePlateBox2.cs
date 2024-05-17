@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class PressurePlateBox : MonoBehaviour
+public class PressurePlateBox2 : MonoBehaviour
 {
     public GameObject nextPressurePlate; // La siguiente pressure plate a activar
 
@@ -10,7 +9,8 @@ public class PressurePlateBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!activated && other.CompareTag("Player1"))
+        Debug.Log($"OnTriggerEnter {gameObject.name}");
+        if (!activated && other.CompareTag("Player2"))
         {
             // Desactiva la pressure plate actual
             gameObject.SetActive(false);
