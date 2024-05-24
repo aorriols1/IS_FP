@@ -35,7 +35,7 @@ public class Player1Controller : MonoBehaviour
     
     void SetCountText()
     {
-        countText.text = "Player 1: " + count.ToString();
+        countText.text = "P1 counter: " + count.ToString();
         if(count >= 4)
         {
             winTextObject.SetActive(true);
