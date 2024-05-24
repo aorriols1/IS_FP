@@ -55,5 +55,34 @@ Start the coroutine if both players have touched the colliders:
 
 ```if (player1Touched && player2Touched) { StartCoroutine(ChangeSceneAfterDelay()); }:``` Initiates the scene change coroutine if both player1Touched and player2Touched are true.
 
-The coroutine waits for the specified time before loading the new scene, logging messages at the start and after the wait period.
+The coroutine ```IEnumerator ChangeSceneAfterDelay()``` waits for the specified time before loading the new scene, logging messages at the start and after the wait period.
+
+### GameManager
+
+Method ´´´Awake()´´´ is called when the script instance is being loaded
+
+Ensure a single instance of GameManager:
+```if (instance == null) { ... } else { ... }:``` Checks if the instance is null. If it is, assigns this to instance and marks the GameObject to not be destroyed on scene load. If instance is not null, destroys the duplicate GameObject to maintain a single instance.
+```DontDestroyOnLoad(gameObject);``` Prevents the GameObject from being destroyed when loading a new scene.
+
+
+Method ```AddPoint(int playerNumber)``` adds a point to the specified player's score:
+Add a point to Player 1:
+```if (playerNumber == 1) { ... }:``` Increments player1Points and logs the updated points.
+Add a point to Player 2:
+```else if (playerNumber == 2) { ... }:``` Increments player2Points and logs the updated points.
+
+Method ```SubtractPoint(int playerNumber)``` subtracts a point from the specified player's score:
+
+Subtract a point from Player 1:
+```if (playerNumber == 1) { ... }:``` Decrements player1Points and logs the updated points.
+Subtract a point from Player 2:
+```else if (playerNumber == 2) { ... }:``` Decrements player2Points and logs the updated points.
+
+Method ```TransferPoint(int fromPlayer, int toPlayer)``` transfers a point from one player to the other, ensuring the source player has points to transfer:
+
+Transfer a point from Player 1 to Player 2:
+```if (fromPlayer == 1 && player1Points > 0) { ... }:``` Decrements player1Points, increments player2Points, and logs the updated points for both players.
+Transfer a point from Player 2 to Player 1:
+```else if (fromPlayer == 2 && player2Points > 0) { ... }:``` Decrements player2Points, increments player1Points, and logs the updated points for both players.
 
