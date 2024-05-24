@@ -7,7 +7,7 @@ public class LoadingScenes : MonoBehaviour
     // Tiempo en segundos antes de cambiar de escena
     public float delay = 5.0f;
     // Nombre de la escena a la que quieres cambiar
-    public string sceneName = "Scene2";
+    public string sceneName = "Scene2"; // Default scene name
 
     private static bool player1Touched = false;
     private static bool player2Touched = false;
@@ -29,8 +29,13 @@ public class LoadingScenes : MonoBehaviour
         // Si ambos jugadores han tocado sus colliders, inicia la corrutina
         if (player1Touched && player2Touched)
         {
-            StartCoroutine(ChangeSceneAfterDelay());
+            CoroutineManager.Instance.StartRoutine(ChangeSceneAfterDelay());
         }
+    }
+
+    public void SetSceneName(string newSceneName)
+    {
+        sceneName = newSceneName;
     }
 
     IEnumerator ChangeSceneAfterDelay()
