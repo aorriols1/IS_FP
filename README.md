@@ -59,7 +59,7 @@ The coroutine ```IEnumerator ChangeSceneAfterDelay()``` waits for the specified 
 
 ### GameManager
 
-Method ´´´Awake()´´´ is called when the script instance is being loaded
+Method ```Awake()``` is called when the script instance is being loaded
 
 Ensure a single instance of GameManager:
 ```if (instance == null) { ... } else { ... }:``` Checks if the instance is null. If it is, assigns this to instance and marks the GameObject to not be destroyed on scene load. If instance is not null, destroys the duplicate GameObject to maintain a single instance.
