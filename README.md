@@ -32,3 +32,28 @@ The condition ```if (!activated && other.CompareTag("Player"))``` ensures that t
 ```if (nextPressurePlate != null) { nextPressurePlate.SetActive(true); }``` checks if the nextPressurePlate variable has been assigned a GameObject. If so, it sets that GameObject to active, "turning on" the next pressure plate.
 
 ```activated = true;``` updates the activated variable to true, ensuring that the pressure plate cannot be activated again.
+
+### Player1Controller
+
+The script manages player movement using Rigidbody physics.
+
+It updates the UI to show the current score and a win message when the player collects enough items.
+
+The ```OnTriggerEnter``` method handles collisions with objects tagged "Player1", deactivating them and updating the score.
+
+### LoadingScenes
+
+The script inherits from ```MonoBehaviour```, the base class for all scripts in Unity. This script waits for both players to touch a designated area before initiating a scene change after a delay.
+
+Check which player has touched the collider:
+
+```if (other.CompareTag("Player1")) { ... }:``` Sets player1Touched to true if the collider belongs to Player 1 and logs a debug message.
+
+```else if (other.CompareTag("Player2")) { ... }:``` Sets player2Touched to true if the collider belongs to Player 2 and logs a debug message.
+
+Start the coroutine if both players have touched the colliders:
+
+```if (player1Touched && player2Touched) { StartCoroutine(ChangeSceneAfterDelay()); }:``` Initiates the scene change coroutine if both player1Touched and player2Touched are true.
+
+The coroutine waits for the specified time before loading the new scene, logging messages at the start and after the wait period.
+
