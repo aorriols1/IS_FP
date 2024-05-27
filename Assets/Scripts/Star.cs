@@ -5,18 +5,39 @@ using UnityEngine;
 
 public class Star : MonoBehaviour
 {
+    public AudioSource audioSource; // El AudioSource para reproducir el sonido
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player1"))
         {
-            GameManager.instance.AddPoint(1);
-            Destroy(gameObject); // Elimina el objeto Star después de que sea recogido
+            Debug.Log("Player1 picked up the star.");
+            GameManager.instance.AddPoint(1); // Suma un punto al Jugador 1
+            PlaySoundAndDestroy();
         }
         else if (other.CompareTag("Player2"))
         {
-            GameManager.instance.AddPoint(2);
-            Destroy(gameObject); // Elimina el objeto Star después de que sea recogido
+            Debug.Log("Player2 picked up the star.");
+            GameManager.instance.AddPoint(2); // Suma un punto al Jugador 2
+            PlaySoundAndDestroy();
         }
     }
+
+    private void PlaySoundAndDestroy()
+    {
+        if (audioSource != null)
+        {
+            // Desacopla el audioSource del objeto y lo reproduce
+            audioSource.transform.parent = null;
+            audioSource.Play();
+
+            // Destruye el GameObject del audio después de que el sonido haya terminado de reproducirse
+            Destroy(audioSource.gameObject, audioSource.clip.length);
+        }
+
+        // Destruye el GameObject de la estrella inmediatamente
+        Destroy(gameObject);
+    }
 }
+
 
