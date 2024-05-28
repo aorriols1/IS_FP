@@ -693,7 +693,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 26bc4f99f42f945dd9aa3f4bfecb6481, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1152,6 +1152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a590a80bad6af8a4eaa19194133619d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: a590a80bad6af8a4eaa19194133619d0, type: 3}
       propertyPath: m_Name
       value: picnic bag
@@ -1226,6 +1230,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8253ca105f4ae554994c59ec48e47051, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 8253ca105f4ae554994c59ec48e47051, type: 3}
       propertyPath: m_Name
       value: grass 2
@@ -2164,6 +2172,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
       propertyPath: m_Name
       value: spherical tree (4)
@@ -2765,6 +2777,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 05cee6315ff403c47b560042975f1dc7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 05cee6315ff403c47b560042975f1dc7, type: 3}
       propertyPath: m_Name
       value: grass 1
@@ -2839,6 +2855,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
       propertyPath: m_Name
       value: spherical tree (1)
@@ -4683,7 +4703,7 @@ PrefabInstance:
     - target: {fileID: 2619420296748191514, guid: 5f9a8c64e8b804ca2946de5c6383edd6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6083c3e53d67518479e56dfb909847c8, type: 2}
+      objectReference: {fileID: 2100000, guid: a7b03a207290de447b624608f4a560b7, type: 2}
     - target: {fileID: 3271376987825962549, guid: 5f9a8c64e8b804ca2946de5c6383edd6, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -5308,6 +5328,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
       propertyPath: m_Name
       value: spherical tree (3)
@@ -6846,6 +6870,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ffccc22705d9dea4da9af3336f1e9d4c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: ffccc22705d9dea4da9af3336f1e9d4c, type: 3}
       propertyPath: m_Name
       value: deciduous tree
@@ -7596,6 +7624,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 97af63e2ae091c54db92acda3678e833, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 97af63e2ae091c54db92acda3678e833, type: 3}
       propertyPath: m_Name
       value: grass 4
@@ -9099,6 +9131,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
       propertyPath: m_Name
       value: spherical tree
@@ -9851,6 +9887,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6b7d8ff71597e884f92dee7df1d4572b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 6b7d8ff71597e884f92dee7df1d4572b, type: 3}
       propertyPath: m_Name
       value: grass 3
@@ -10758,6 +10798,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e4925266f9982a1429fe6760c4524c60, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: e4925266f9982a1429fe6760c4524c60, type: 3}
       propertyPath: m_Name
       value: wooden table
@@ -11290,6 +11334,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 4525472cbde143643bf81ab9935ad1bd, type: 3}
       propertyPath: m_Name
       value: spherical tree (2)
@@ -11364,6 +11412,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4ae667e39975ecc4fbd91f4115b24a45, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41d138df2fc885b489e694869d4daa71, type: 2}
     - target: {fileID: 919132149155446097, guid: 4ae667e39975ecc4fbd91f4115b24a45, type: 3}
       propertyPath: m_Name
       value: lamppost
