@@ -31,11 +31,18 @@ Material:
     RenderType: TransparentCutout
   disabledShaderPasses:
   - DistortionVectors
+<<<<<<< Updated upstream
   - MOTIONVECTORS
+=======
+>>>>>>> Stashed changes
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
   - RayTracingPrepass
+<<<<<<< Updated upstream
+=======
+  - MOTIONVECTORS
+>>>>>>> Stashed changes
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -243,7 +250,11 @@ Material:
     - _LinkDetailsWithBase: 0
     - _MaterialID: 1
     - _Metallic: 0
+<<<<<<< Updated upstream
     - _MetallicRemapMax: 0
+=======
+    - _MetallicRemapMax: 1
+>>>>>>> Stashed changes
     - _MetallicRemapMin: 0
     - _Mode: 1
     - _NormalMapSpace: 0
