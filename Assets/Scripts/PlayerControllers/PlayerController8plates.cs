@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 //using UnityEngine.InputSystem;
 using TMPro;
-public class Player1Controller : MonoBehaviour
+
+public class PlayerController8plates : MonoBehaviour
 {
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public string playerTag;
 
     private Rigidbody rb;
     private int count;
     private float movementX;
     private float movementY;
+
+    private static bool hasWon = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +27,7 @@ public class Player1Controller : MonoBehaviour
         SetCountText();
         winTextObject.SetActive(false);
     }
+
     /*
     void OnMove(InputValue movementValue)
     { 
@@ -35,9 +40,10 @@ public class Player1Controller : MonoBehaviour
     
     void SetCountText()
     {
-        countText.text = "P1 counter: " + count.ToString();
-        if(count >= 4)
+        countText.text = playerTag + " counter: " + count.ToString();
+        if(count >= 8 && !hasWon) //Count up to 8 plates
         {
+            hasWon = true;
             winTextObject.SetActive(true);
         }
     }
@@ -51,7 +57,7 @@ public class Player1Controller : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player1"))
+        if(other.gameObject.CompareTag(playerTag))
         {
             other.gameObject.SetActive(false);
             count = count + 1;

@@ -43,8 +43,12 @@ public class LoadingScenes : MonoBehaviour
         Debug.Log("Start coroutine");
         // Espera por el tiempo especificado
         yield return new WaitForSeconds(delay);
-        Debug.Log("Cotninue coroutine");
+        Debug.Log("Continue coroutine");
+        // Reset static variables before loading the scene
+        player1Touched = false;
+        player2Touched = false;
         // Cambia a la nueva escena
         SceneManager.LoadScene(sceneName);
     }
+
 }
