@@ -30,19 +30,15 @@ public class GameManager : MonoBehaviour
 
     public void AddPoint(int playerNumber)
     {
-        if (hasWon) return; // Prevent further points if a player has won
-
         if (playerNumber == 1)
         {
             player1Points++;
             Debug.Log("Player 1 Points: " + player1Points);
-            hasWon = true; // Set the flag indicating a player has won
         }
         else if (playerNumber == 2)
         {
             player2Points++;
             Debug.Log("Player 2 Points: " + player2Points);
-            hasWon = true; // Set the flag indicating a player has won
         }
     }
 
@@ -76,5 +72,15 @@ public class GameManager : MonoBehaviour
             Debug.Log("Player 1 Points: " + player1Points);
             Debug.Log("Player 2 Points: " + player2Points);
         }
+    }
+
+    public void SetHasWon(bool value)
+    {
+        hasWon = value;
+    }
+
+    public void ResetHasWon()
+    {
+        hasWon = false;
     }
 }

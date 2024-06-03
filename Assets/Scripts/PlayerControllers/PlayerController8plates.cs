@@ -4,6 +4,7 @@ using UnityEngine;
 //using UnityEngine.InputSystem;
 using TMPro;
 
+
 public class PlayerController8plates : MonoBehaviour
 {
     public float speed = 0;
@@ -16,9 +17,11 @@ public class PlayerController8plates : MonoBehaviour
     private float movementX;
     private float movementY;
 
-    private static bool hasWon = false;
+    private bool hasWon = false; // Variable para controlar si el jugador ha ganado
 
-    // Start is called before the first frame update
+    // Variable estática para determinar si un jugador ya ha ganado
+    private static bool gameOver = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -28,41 +31,44 @@ public class PlayerController8plates : MonoBehaviour
         winTextObject.SetActive(false);
     }
 
-    /*
-    void OnMove(InputValue movementValue)
-    { 
-        Vector2 movementVector = movementValue.Get<Vector2>();
-
-        movementX = movementVector.x;
-        movementY = movementVector.y;
-    }
-    */
-    
     void SetCountText()
     {
         countText.text = playerTag + " counter: " + count.ToString();
-        if(count >= 8 && !hasWon) //Count up to 8 plates
+        if (count >= 8 && !hasWon && !gameOver) // Contar hasta 8 platos y verificar si el jugador no ha ganado aún y el juego no ha terminado
         {
             hasWon = true;
-            winTextObject.SetActive(true);
+            gameOver = true; // Marcar el juego como terminado
+
+            if (gameObject.CompareTag(playerTag)) // Verificar si este jugador es el que ha recogido todas las piezas
+            {
+                winTextObject.SetActive(true); // Activar el texto de victoria solo para este jugador
+            }
         }
     }
 
     void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        
-        rb.AddForce(movement * speed);
+        if (!hasWon) // Solo mover al jugador si aún no ha ganado
+        {
+            Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+            rb.AddForce(movement * speed);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag(playerTag))
+        if (!hasWon && other.gameObject.CompareTag(playerTag)) // Verificar si el jugador no ha ganado y la colisión es con el jugador actual
         {
-            other.gameObject.SetActive(false);
-            count = count + 1;
-
-            SetCountText();
+            other.gameObject.SetActive(false); // Desactivar el objeto que ha colisionado con el jugador
+            count++; // Incrementar el contador de platos recogidos
+            SetCountText(); // Actualizar el texto del contador
         }
     }
+
+    void OnDestroy()
+    {
+        // Resetear gameOver al destruir el objeto (cargar una nueva escena)
+        gameOver = false;
+    }
 }
+
