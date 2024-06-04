@@ -1,7 +1,7 @@
 # IS_FP
 
 ## Scenario
-The initial structure of our project consists of various materials, 3D assets, and audio files. The purpose of this first version is to test the arrangement and appearance of colors, and thus it may differ from the final version. Here are the key components:
+The purpose of this game consists on competing between two players to obtain the maximum amount of points by interacting with some game elements. Here are the key components:
 
 ### Boxes with Hands and Feet:
 
@@ -11,14 +11,6 @@ Terrain: Used the "Terrain Sample Asset Pack" from the Unity Asset Store to esta
 City Park Simulation: Incorporated 3D assets from the "Low Poly Environment Park" package to create the experience of being in a city park.
 
 Environmental Audio: Added a .wav file from Freesound to simulate birds singing and enhance the environment's audio experience.
-
-Assets References
-
-Terrain Sample Asset Pack https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808
-
-Low Poly Environment Park https://assetstore.unity.com/packages/3d/environments/low-poly-environment-park-242702
-
-Birds Singing Audio https://freesound.org/people/klankbeeld/sounds/624532/
 
 ## Scripts
 
@@ -33,7 +25,7 @@ The condition ```if (!activated && other.CompareTag("Player"))``` ensures that t
 
 ```activated = true;``` updates the activated variable to true, ensuring that the pressure plate cannot be activated again.
 
-### Player1Controller
+### PlayerController (for 6, 7 or 8 plates)
 
 The script manages player movement using Rigidbody physics.
 
@@ -111,3 +103,27 @@ The script detects when a player collides with the thief.
 If the collider belongs to Player 1 or Player 2, it subtracts a point from the one who touched and adds it to the respective player by calling the ```TransferPoint``` method on the ```GameManager``` instance.
 
 After transfering the point, the star ```GameObject``` destroys itself to simulate being collected.
+
+## Assets References
+
+Terrain Sample Asset Pack https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808
+
+Low Poly Environment Park https://assetstore.unity.com/packages/3d/environments/low-poly-environment-park-242702
+
+Low-Poly Medieval Market https://assetstore.unity.com/packages/3d/environments/low-poly-medieval-market-262473
+
+2D Character - Astronaut https://assetstore.unity.com/packages/2d/characters/2d-character-astronaut-182650
+
+Boy sitting (Mixamo animation character) https://www.mixamo.com/#/?page=1&query=timmy&type=Character
+
+Music from game title audio https://freesound.org/people/xtrgamr/sounds/244537/
+
+Birds Singing Audio https://freesound.org/people/klankbeeld/sounds/624532/
+
+Scifi Lava audio https://freesound.org/people/craigsmith/sounds/675729/
+
+Space scene audio https://freesound.org/people/Jovica/sounds/110240/
+
+Sea waves audio https://freesound.org/people/zavoronok/sounds/670689/
+
+Text to Speech audio https://ttsmaker.com/
